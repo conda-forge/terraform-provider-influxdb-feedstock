@@ -9,13 +9,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/terraform-providers/{{ name }}/archive/v{{ version }}.tar.gz  # [not win]
-  fn: {{ name }}-{{ version }}.tar.gz  # [not win]
-  sha256: 64ee535c3b6819ead1888cac0f07584548ff547349842669aa950b24ee32b879  # [not win]
-
-  url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_amd64.zip  # [win64]
-  fn: {{ name }}-{{ version }}.zip  # [win]
-  sha256: 60060d5176bc3c48afbc2cb1992276a60e492f7affca6cedd788e2d36aecc63f  # [win64]
+  - folder: src/github.com/terraform-providers/{{ name|lower }}
+    url: https://github.com/terraform-providers/{{ name }}/archive/v{{ version }}.tar.gz  # [not win]
+    url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_amd64.zip  # [win64]
+    sha256: 64ee535c3b6819ead1888cac0f07584548ff547349842669aa950b24ee32b879  # [not win]
+    sha256: 60060d5176bc3c48afbc2cb1992276a60e492f7affca6cedd788e2d36aecc63f  # [win64]
 
 build:
   number: 0
