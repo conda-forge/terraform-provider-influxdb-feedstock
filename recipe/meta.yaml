@@ -18,7 +18,7 @@ source:
 build:
   number: 0
   script:
-    - XCOPY src/github.com/terraform-providers/{{ name|lower}}/{{ x4_plugin }}.exe %LIBRARY_BIN%  # [win]
+    - XCOPY src\github.com\terraform-providers\{{ name|lower}}\{{ x4_plugin }}.exe %LIBRARY_BIN%  # [win]
 
 requirements:
   build:
