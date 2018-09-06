@@ -1,5 +1,5 @@
 {% set provider = "InfluxDB" %}
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 
 {% set name = "terraform-provider-" + provider.lower() %}
 {% set x4_plugin = name + '_v' + version + "_x4" %}
@@ -12,8 +12,8 @@ source:
   - folder: src/github.com/terraform-providers/{{ name|lower }}
     url: https://github.com/terraform-providers/{{ name }}/archive/v{{ version }}.tar.gz  # [not win]
     url: https://releases.hashicorp.com/{{ name }}/{{ version }}/{{ name }}_{{ version }}_windows_amd64.zip  # [win64]
-    sha256: 64ee535c3b6819ead1888cac0f07584548ff547349842669aa950b24ee32b879  # [not win]
-    sha256: 60060d5176bc3c48afbc2cb1992276a60e492f7affca6cedd788e2d36aecc63f  # [win64]
+    sha256: 8ee9dff38a8fbcdd943a00e54fd5ec79edb9a29e8d7e25b4f694001f6e348e47  # [not win]
+    sha256: f0e713bc210159ffb5382b8d9353a0fae9e50b1b997181de9c7d03ac13db5c04  # [win64]
 
 build:
   number: 0
