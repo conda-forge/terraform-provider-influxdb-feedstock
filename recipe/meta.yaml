@@ -1,6 +1,6 @@
 {% set provider = "InfluxDB" %}
 {% set goname = "github.com/terraform-providers/terraform-provider-"+provider.lower() %}
-{% set version = "1.3.0" %}
+{% set version = "1.3.1" %}
 
 {% set name = goname.split('/')[-1] %}
 
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://{{ goname }}/archive/v{{ version }}.tar.gz
-  sha256: 01ca307d8e301ddf9041e8e29d166115b3e7c3d331b26ef51d334b44e505346e
+  sha256: b1b4ba72fc5c3af4167011b9e7360bc15cdeaf8487c2790dc551c9f88618ae3b
 
 build:
   number: 0
